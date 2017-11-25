@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>hackerone.com/ed</title>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+</head>
+<body>
+  <div id="gitalk-container"></div>
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'e6148dc1ef38dc32125d',
+      // GitHub advises not to hard code the client secret,
+      // but the callback URL has been set to https://edoverflow.com,
+      // which should ensure that requests are only initiated
+      // by this website. If you are able to bypass this or
+      // believe that this is still an issue, please report it
+      // to hackerone.com/ed.
+      clientSecret: '3e3e47634fafce518bf5291c902733aff2a5bb0b',
+      repo: 'test',
+      owner: 'EdOverflow',
+      admin: ['EdOverflow'],
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  </script>
+</body>
+</html>
